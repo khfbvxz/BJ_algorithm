@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch FSelfNumber",
+            "request": "launch",
+            "mainClass": "function.FSelfNumber",
+            "projectName": "BJVs_cab4ed12"
+        },
+        {
+            "type": "java",
+            "name": "Launch ClassTest",
+            "request": "launch",
+            "mainClass": "function.ClassTest",
+            "projectName": "BJVs_cab4ed12"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
