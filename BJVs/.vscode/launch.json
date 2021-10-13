@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch FHansu",
+            "request": "launch",
+            "mainClass": "function.FHansu",
+            "projectName": "BJVs_cab4ed12"
+        },
+        {
+            "type": "java",
             "name": "Launch FSelfNumber",
             "request": "launch",
             "mainClass": "function.FSelfNumber",

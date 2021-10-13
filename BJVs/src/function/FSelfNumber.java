@@ -1,6 +1,6 @@
 package function;
 
-import java.util.Arrays;
+// import java.util.Arrays;
 
 // 이문제는 다시 봐야될것 같음 
 public class FSelfNumber {

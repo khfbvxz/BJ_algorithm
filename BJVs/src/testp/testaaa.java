@@ -77,6 +77,8 @@ public class testaaa {
 				System.out.println(board[i]); // board[i]는 1차원 배열
             }
 			System.out.println();  // 
+
 		}
-	}
+        scanner.close();
+	}//main end
 }
