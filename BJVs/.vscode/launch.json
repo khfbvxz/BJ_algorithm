@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch NumberHabS",
+            "request": "launch",
+            "mainClass": "string.NumberHabS",
+            "projectName": "BJVs_cab4ed12"
+        },
+        {
+            "type": "java",
             "name": "Launch AsciiS",
             "request": "launch",
             "mainClass": "string.AsciiS",
