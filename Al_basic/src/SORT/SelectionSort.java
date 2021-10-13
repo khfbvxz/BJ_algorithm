@@ -8,6 +8,8 @@ import java.util.Arrays;
 맨 오른쪽 원소를 제외한다.
 하나의 원소만 남을때까지 위의 루프를 반복한다.
 
+가장 원시적인 방법 
+
 */
 public class SelectionSort {
     private static int[] input = {15, 6, 52, 7, 19, 23, 4, 1};
