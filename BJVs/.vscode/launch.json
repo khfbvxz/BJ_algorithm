@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch AsciiS",
+            "request": "launch",
+            "mainClass": "string.AsciiS",
+            "projectName": "BJVs_cab4ed12"
+        },
+        {
+            "type": "java",
             "name": "Launch FHansu",
             "request": "launch",
             "mainClass": "function.FHansu",
