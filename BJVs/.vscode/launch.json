@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch FindAlphabetS",
+            "request": "launch",
+            "mainClass": "string.FindAlphabetS",
+            "projectName": "BJVs_cab4ed12"
+        },
+        {
+            "type": "java",
             "name": "Launch NumberHabS",
             "request": "launch",
             "mainClass": "string.NumberHabS",
