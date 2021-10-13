@@ -12,13 +12,25 @@ import java.util.Scanner;
 
 */
 public class FHansu {
+    static int count =0;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        System.out.println(n);
+        for (int i = 1 ; i <=n ;i++){
+            hansu(i);
+        }
+        System.out.println(count);
         sc.close();
     }
-    public static void num(int n){
-      
+    public static void hansu(int n){
+        if(n<100){
+            count++;
+        }else if(n>=100 && n<1000){
+            int hun = n/100;
+            int ten = (n-hun*100)/10;
+            int one = (n-hun*100-ten*10); 
+            if( (hun-ten)==(ten-one) ){count++;}
+            else{}                
+        }else{}    
     }
 }
