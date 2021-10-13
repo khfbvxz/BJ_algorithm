@@ -1,6 +1,6 @@
 package SORT;
 
-import java.util.Arrays;
+// import java.util.Arrays;
 
 /*
 퀵 정렬
@@ -20,44 +20,79 @@ import java.util.Arrays;
 
 */
 public class QuickSort {
+    // public static void main(String[] args) {
+    //     int [] arr = {5, 13, 32, 25, 2, 42, 18, 29, 36, 1};
+    //     System.out.println(Arrays.toString(arr)+"원본배열");
+    //     QuickSortMax(arr, 0, arr.length-1);
+    //     for(int i : arr){
+    //         System.out.print(i+"  ");
+    //     }
+    // }
+    // public static void QuickSortMax(int []arr , int start, int end){
+    //     if(start>=end) // 원소가 한개인 경우
+    //         return;
+    //     int pivot = start; //피벗은 첫번째 원소
+    //     int left = start+1;
+    //     int right = end;
+
+    //     while(left <= right){
+    //         // 피벗 보다 큰 데이터를 찾을때까지 반복
+    //         while( left <= end && arr[left] <= arr[pivot]){
+    //             left+=1;
+    //         }
+    //         // 피벗보다 작은 데이터를 찾을 떄 까지 반복
+    //         while( right > start && arr[right] >= arr[pivot] ){
+    //             right-=1;
+    //         }
+    //         if(left > right){ // 엇갈렸다면 작은 데이터와 피벅을 교체
+    //             int tmp = arr[right];
+    //             arr[right] = arr[pivot];
+    //             arr[pivot] = tmp;
+    //         }else{ // 엇갈리지 않았다면 작은 데이터와 큰 데이터를 교체
+    //             int tmp = arr[right];
+    //             arr[right] = arr[left];
+    //             arr[left] = tmp;
+    //         }
+    //         System.out.println(Arrays.toString(arr));
+    //         // 분할 이후 왼쪽 부분과 오른쪽 부분에서 각각 정렬 수행
+    //         QuickSortMax(arr, start, right-1);
+    //         QuickSortMax(arr, right+1, end);
+
+    //     }
+    // }
+    public static void swap(int[] arr, int pl, int pr) {
+        int temp = arr[pl];
+        arr[pl] = arr[pr];
+        arr[pr] = temp;
+    }
+    public static void quickSort(int[] arr, int left, int right) {
+        int pl = left;
+        int pr = right;
+        int pivot = arr[ (arr[left] + arr[right]) / 2];
+        
+        do {                                //정복단계
+            while(arr[pl] < pivot) pl++;
+            while(arr[pr] > pivot) pr--;
+            if(pl <= pr) {
+                swap(arr, pl, pr);
+                pl++;
+                pr--;
+            }
+        }while(pl <= pr);
+        
+        if(left < pr) quickSort(arr, left, pr);
+        if(pl < right) quickSort(arr, pl, right);
+        
+    }
+
     public static void main(String[] args) {
-        int [] arr = {5, 13, 32, 25, 2, 42, 18, 29, 36, 1};
-        System.out.println(Arrays.toString(arr)+"원본배열");
-        QuickSortMax(arr, 0, arr.length-1);
-        for(int i : arr){
-            System.out.print(i+"  ");
+        int[] arr = { 5, 7, 1, 4, 6, 2, 3, 9, 8 };
+        int N = arr.length;
+        quickSort(arr, 0, N-1);
+        
+        for(int a : arr) {
+            System.out.print(a +" ");
         }
     }
-    public static void QuickSortMax(int []arr , int start, int end){
-        if(start>=end) // 원소가 한개인 경우
-            return;
-        int pivot = start; //피벗은 첫번째 원소
-        int left = start+1;
-        int right = end;
 
-        while(left <= right){
-            // 피벗 보다 큰 데이터를 찾을때까지 반복
-            while( left <= end && arr[left] <= arr[pivot]){
-                left+=1;
-            }
-            // 피벗보다 작은 데이터를 찾을 떄 까지 반복
-            while( right > start && arr[right] >= arr[pivot] ){
-                right-=1;
-            }
-            if(left > right){ // 엇갈렸다면 작은 데이터와 피벅을 교체
-                int tmp = arr[right];
-                arr[right] = arr[pivot];
-                arr[pivot] = tmp;
-            }else{ // 엇갈리지 않았다면 작은 데이터와 큰 데이터를 교체
-                int tmp = arr[right];
-                arr[right] = arr[left];
-                arr[left] = tmp;
-            }
-            System.out.println(Arrays.toString(arr));
-            // 분할 이후 왼쪽 부분과 오른쪽 부분에서 각각 정렬 수행
-            QuickSortMax(arr, start, right-1);
-            QuickSortMax(arr, right+1, end);
-
-        }
-    }
 }
