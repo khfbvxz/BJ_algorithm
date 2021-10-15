@@ -1,7 +1,6 @@
 package string;
 
 
-import java.util.Arrays;
 
 /*
 문제
@@ -14,6 +13,7 @@ import java.util.Arrays;
 만약, 어떤 알파벳이 단어에 포함되어 있지 않다면 -1을 출력한다. 단어의 첫 번째 글자는 0번째 위치이고, 두 번째 글자는 1번째 위치이다.
 */
 
+// import java.util.Arrays;
 import java.util.Scanner;
 public class FindAlphabetS {
     public static void main(String[] args) {
@@ -36,5 +36,6 @@ public class FindAlphabetS {
         for(int i = 0 ; i<26 ; i++){
             System.out.print(count[i]+" ");
         }
+        sc.close();
     }
 }

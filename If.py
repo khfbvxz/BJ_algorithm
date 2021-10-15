@@ -46,9 +46,14 @@
 
 ## 알람시계
 
-H , M  = input().split()
-H = int(H)
-M = int(M)
-if M<45:
-    print(H-1,)
-print(H,M)
+# H , M  = input().split()
+# H = int(H)
+# M = int(M)
+# if M<45:
+#     print(H-1,)
+# print(H,M)
+
+a = "Hello Python"
+b = a[-4:-1]
+c = a [-1:-4:-1]
+print(c)
