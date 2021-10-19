@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SanSuS",
+            "request": "launch",
+            "mainClass": "string.SanSuS",
+            "projectName": "BJVs_cab4ed12"
+        },
+        {
+            "type": "java",
             "name": "Launch WordCountS",
             "request": "launch",
             "mainClass": "string.WordCountS",
