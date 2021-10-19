@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch WordCountS",
+            "request": "launch",
+            "mainClass": "string.WordCountS",
+            "projectName": "BJVs_cab4ed12"
+        },
+        {
+            "type": "java",
             "name": "Launch WordStudyS",
             "request": "launch",
             "mainClass": "string.WordStudyS",
